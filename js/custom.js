@@ -19,7 +19,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -48,7 +48,7 @@ $(document).ready(function()
 	initCausesSlider();
 	initTimer();
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -66,7 +66,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Home Slider
 
@@ -81,10 +81,10 @@ $(document).ready(function()
 			homeSlider.owlCarousel(
 			{
 				items:1,
-				autoplay:true,
+				autoplay:false,
 				autoplayTimeout:5000,
 				autoplayHoverPause:false,
-				loop:true,
+				loop:false,
 				nav:false,
 				dots:false,
 				smartSpeed:1200
@@ -101,7 +101,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	4. Init Header Search
 
@@ -121,7 +121,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	5. Init Menu
 
@@ -143,7 +143,7 @@ $(document).ready(function()
 					{
 						openMenu();
 					}
-				});	
+				});
 
 				$('.menu_close').on('click', function()
 				{
@@ -172,7 +172,7 @@ $(document).ready(function()
 		menuActive = true;
 	}
 
-	/* 
+	/*
 
 	6. Init Causes Slider
 
@@ -228,7 +228,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	7. Init Timer
 
@@ -246,7 +246,7 @@ $(document).ready(function()
 	    	date.setDate(date.getDate() + 3);
 	    	var target_date = date.getTime();
 	    	//----------------------------------------
-	 
+
 			// variables for time units
 			var days, hours, minutes, seconds;
 
@@ -260,14 +260,14 @@ $(document).ready(function()
 			    // find the amount of "seconds" between now and target
 			    var current_date = new Date().getTime();
 			    var seconds_left = (target_date - current_date) / 1000;
-			 
+
 			    // do some time calculations
 			    days = parseInt(seconds_left / 86400);
 			    seconds_left = seconds_left % 86400;
-			     
+
 			    hours = parseInt(seconds_left / 3600);
 			    seconds_left = seconds_left % 3600;
-			     
+
 			    minutes = parseInt(seconds_left / 60);
 			    seconds = parseInt(seconds_left % 60);
 
@@ -275,10 +275,10 @@ $(document).ready(function()
 			    d.text(days);
 			    h.text(hours);
 			    m.text(minutes);
-			    s.text(seconds); 
-			 
+			    s.text(seconds);
+
 			}, 1000);
-    	}	
+    	}
 	}
 
 });
